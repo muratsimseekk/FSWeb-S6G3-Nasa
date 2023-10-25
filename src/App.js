@@ -33,8 +33,15 @@ function App() {
         </span>
         !
       </p>
-      <Baslik />
-      <Gonderiler mediaType={datalar.media_type} mediaUrl={datalar.url} />
+      <Baslik tarih={datalar.date} />
+
+      <Gonderiler
+        mediaType={datalar.media_type}
+        mediaUrl={datalar.url}
+        title={datalar.title}
+        copyright={datalar.copyright}
+        expln={datalar.explanation}
+      />
     </div>
   );
 }
