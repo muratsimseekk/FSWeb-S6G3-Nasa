@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.icerik {
+  width: 27%;
+}
