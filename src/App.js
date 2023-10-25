@@ -3,27 +3,26 @@ import "./App.css";
 import Gonderiler from "./bilesenler/Gonderiler/Gonderiler";
 import Baslik from "./bilesenler/Baslik/Baslik";
 import axios from "axios";
+import { useEffect } from "react";
 
 function App() {
-  const [datalar, setDatalar] = useState("");
+  const [datalar, setDatalar] = useState();
+  const getData = () => {
+    axios
+      .get(
+        "https://api.nasa.gov/planetary/apod?api_key=kNvjfx78evUBjcxdoDuRSSE7XO0lPtSp5lyzJ5Mq"
+      )
+      .then((veriler) => {
+        setDatalar(veriler.data);
+      });
+  };
 
-  async function getData() {
-    try {
-      const veri = await axios.get(
-        "https://api.nasa.gov/planetary/apod?api_key=qdvLEGxhOMGRoctdZfklB3YkBPFdWuIJhkrOcf0T"
-      );
-      // console.log(veri);
-      const veriler = veri.data;
-      setDatalar(veriler);
-    } catch (error) {
-      console.log("error", error);
-      throw error;
-    }
-  }
-  // console.log(datalar);
-  getData();
-  // console.log(getData());
-  // getData();
+  useEffect(() => {
+    getData();
+  }, []);
+
+  console.log("2", datalar.media_type);
+
   return (
     <div className="App">
       <p>
@@ -35,7 +34,7 @@ function App() {
         !
       </p>
       <Baslik />
-      <Gonderiler />
+      <Gonderiler mediaType={datalar.media_type} mediaUrl={datalar.url} />
     </div>
   );
 }

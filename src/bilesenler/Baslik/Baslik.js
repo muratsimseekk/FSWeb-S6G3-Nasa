@@ -1,6 +1,8 @@
 import React from "react";
 import "./Baslik.css";
-const Baslik = (veri) => {
+const Baslik = (props) => {
+  const { tarih } = props;
+
   return (
     <div>
       <h1>NASA Uygulaması</h1>
@@ -8,9 +10,9 @@ const Baslik = (veri) => {
       <p>
         Discover the cosmos! Each day a different image or photograph of our
         fascinating universe is featured, along with a brief explanation written
-        by a professional astronomer.
+        by a professional astronomer.{" "}
       </p>
-      <p>{veri.date}</p>
+      <p>{tarih}</p>
     </div>
   );
 };
