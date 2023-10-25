@@ -2,13 +2,17 @@ import React from "react";
 import "./Gonderiler.css";
 
 const Gonderiler = (props) => {
-  const { mediaType, mediaUrl } = props;
+  const { mediaType, mediaUrl, title, copyright, expln } = props;
   return (
     <div className="container">
       <div className="icerik">
-        <video controls>
-          <source src={mediaUrl} type={mediaType}></source>
-        </video>
+        <iframe width={"100%"} height={"400px"} src={mediaUrl}></iframe>
+        <p className="bold">{title}</p>
+        <p className="bold">Video Credit & Copyright:{copyright}</p>
+        <p>
+          <span className="bold">Explanation:</span>
+          {expln}
+        </p>
       </div>
 
       {/* <div className="icerik">

@@ -21,6 +21,10 @@ function App() {
     getData();
   }, []);
 
+  if (!datalar) {
+    return <div>Loading...</div>;
+  }
+
   console.log("2", datalar.media_type);
 
   return (

@@ -7,5 +7,9 @@
 }
 
 .icerik {
-  width: 27%;
+  width: 90%;
+}
+
+.bold {
+  font-weight: bold;
 }
