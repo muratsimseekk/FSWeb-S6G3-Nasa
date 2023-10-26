@@ -4,6 +4,11 @@
   flex-wrap: nowrap;
   width: 80%;
   margin: auto;
+  height: 100vh;
+}
+
+.mediaContent {
+  width: 85%;
 }
 
 .icerik {

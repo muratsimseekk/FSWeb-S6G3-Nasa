@@ -1,9 +1,16 @@
 .imgDiv {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
 }
 
 img {
   width: 100%;
-  height: 200px;
+  height: 24%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2rem;
 }
