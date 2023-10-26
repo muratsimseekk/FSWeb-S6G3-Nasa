@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "./Baslik.css";
 
 const Baslik = (props) => {
-  const { data } = props;
-
   return (
     <div>
       <h1>NASA Uygulaması</h1>

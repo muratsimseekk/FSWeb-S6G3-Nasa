@@ -1,12 +1,28 @@
 .App {
-  text-align: center;
   background-color: rgb(33, 33, 34);
-  display: flex;
-  flex-direction: column;
   color: #f5f6f8;
   width: 100%;
+  background-image: url("https://cdn.wallpapersafari.com/81/64/zNPon3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 100vh;
 }
 
+.container {
+  max-height: 100%;
+}
+.containerRow {
+  background-color: rgb(30, 29, 30);
+  max-height: 100vh;
+}
+.col-left {
+  max-height: 100vh;
+}
+.col-right {
+  max-height: 100vh;
+  font-size: 0.8rem;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

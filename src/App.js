@@ -4,7 +4,7 @@ import Gonderiler from "./bilesenler/Gonderiler/Gonderiler";
 import Baslik from "./bilesenler/Baslik/Baslik";
 import axios from "axios";
 import { useEffect } from "react";
-import { FormGroup, Input, Label } from "reactstrap";
+import { Col, Container, FormGroup, Input, Label, Row } from "reactstrap";
 
 function App() {
   const [datalar, setDatalar] = useState();
@@ -34,21 +34,34 @@ function App() {
 
   return (
     <div className="App">
-      <Baslik />
-      <FormGroup>
-        <Label style={{ fontSize: "2rem" }} md={3}>
-          Select a Date
-        </Label>
-        <Input
-          id="nasaInput"
-          name="date"
-          type="date"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-          style={{ width: "30%", margin: "0 auto" }}
-        />
-      </FormGroup>
-      <Gonderiler data={datalar} />
+      <Container>
+        <Row className="containerRow">
+          <Col lg="4" md="3" sm="12" className="col-left">
+            <Row className="baslik">
+              <Baslik />
+            </Row>
+            <Row>
+              <FormGroup>
+                <Label style={{ fontSize: "2rem" }} md={3}>
+                  Select a Date
+                </Label>
+                <Input
+                  id="nasaInput"
+                  name="date"
+                  type="date"
+                  value={date}
+                  onChange={(e) => setDate(e.target.value)}
+                  style={{ width: "30%", margin: "0 auto" }}
+                />
+              </FormGroup>
+            </Row>
+            <Row></Row>
+          </Col>
+          <Col lg="8" md="7" sm="12" className="col-right">
+            <Gonderiler data={datalar} />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }
