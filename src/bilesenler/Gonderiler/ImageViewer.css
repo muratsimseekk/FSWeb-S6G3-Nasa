@@ -1,6 +1,9 @@
+.imgDiv {
+  display: flex;
+  flex-direction: column;
+}
+
 img {
   width: 100%;
-}
-.bold {
-  font-weight: bold;
+  height: 200px;
 }

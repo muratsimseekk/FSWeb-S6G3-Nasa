@@ -6,14 +6,17 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  max-height: 100vh;
+  height: 100vh;
 }
 
 .container {
-  max-height: 100%;
+  margin-top: 1rem;
 }
 .containerRow {
   background-color: rgb(30, 29, 30);
+  opacity: 0.9;
+  margin-top: 1.2rem;
+  border-radius: 1rem;
 }
 .col-left {
   display: flex;

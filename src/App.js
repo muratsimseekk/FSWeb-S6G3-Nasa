@@ -53,7 +53,9 @@ function App() {
                 />
               </FormGroup>
             </Row>
-            <Row></Row>
+            <Row>
+              <p>Redesign - Nasa Apod ☄️ by Thomas Bouvier </p>
+            </Row>
           </Col>
           <Col lg="8" md="7" sm="12" className="col-right">
             <Gonderiler data={datalar} />

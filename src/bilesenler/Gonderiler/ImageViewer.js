@@ -4,7 +4,7 @@ const ImageViewer = (props) => {
   const { data } = props;
 
   return (
-    <div>
+    <div className="imgDiv">
       <h1>{data.title}</h1>
       <img src={data.url}></img>
       <p>
