@@ -34,26 +34,20 @@ function App() {
 
   return (
     <div className="App">
-      <p>
-        NASA uygulamasını yapmak için README.md dosyasıdaki talimatları takip
-        edin İyi eğlenceler!{" "}
-        <span role="img" aria-label="go!">
-          🚀
-        </span>
-        !
-      </p>
-
-      <Baslik data={datalar} />
+      <Baslik />
       <FormGroup>
-        <Label for="exampleDate">Select a Date</Label>
+        <Label style={{ fontSize: "2rem" }} md={3}>
+          Select a Date
+        </Label>
         <Input
+          id="nasaInput"
           name="date"
           type="date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
+          style={{ width: "30%", margin: "0 auto" }}
         />
       </FormGroup>
-
       <Gonderiler data={datalar} />
     </div>
   );
