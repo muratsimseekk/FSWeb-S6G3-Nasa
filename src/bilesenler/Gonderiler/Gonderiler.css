@@ -3,13 +3,9 @@
   justify-content: space-evenly;
   flex-wrap: nowrap;
   width: 80%;
-  margin: 2rem auto;
+  margin: auto;
 }
 
 .icerik {
   width: 90%;
-}
-
-.bold {
-  font-weight: bold;
 }

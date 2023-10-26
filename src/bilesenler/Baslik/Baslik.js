@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Baslik.css";
+
 const Baslik = (props) => {
-  const { tarih } = props;
+  const { data } = props;
 
   return (
     <div>
@@ -12,7 +13,6 @@ const Baslik = (props) => {
         fascinating universe is featured, along with a brief explanation written
         by a professional astronomer.{" "}
       </p>
-      <p>{tarih}</p>
     </div>
   );
 };
