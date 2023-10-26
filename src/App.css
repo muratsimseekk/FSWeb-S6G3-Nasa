@@ -14,14 +14,20 @@
 }
 .containerRow {
   background-color: rgb(30, 29, 30);
-  max-height: 100vh;
 }
 .col-left {
-  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  justify-content: space-around;
 }
 .col-right {
-  max-height: 100vh;
   font-size: 0.8rem;
+}
+
+.form-style {
+  display: flex;
+  justify-content: space-between;
 }
 .App-logo {
   height: 40vmin;

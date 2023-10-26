@@ -3,7 +3,7 @@ import "./Baslik.css";
 
 const Baslik = (props) => {
   return (
-    <div>
+    <div className="baslik">
       <h1>NASA Uygulaması</h1>
       <h2>Astronomy Picture of the Day</h2>
       <p>

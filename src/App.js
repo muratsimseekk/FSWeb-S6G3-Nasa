@@ -37,21 +37,19 @@ function App() {
       <Container>
         <Row className="containerRow">
           <Col lg="4" md="3" sm="12" className="col-left">
-            <Row className="baslik">
+            <Row style={{ height: "65%" }}>
               <Baslik />
             </Row>
-            <Row>
-              <FormGroup>
-                <Label style={{ fontSize: "2rem" }} md={3}>
-                  Select a Date
-                </Label>
+            <Row style={{ height: "5%" }}>
+              <FormGroup className="form-style">
+                <Label> Select Date :</Label>
                 <Input
                   id="nasaInput"
                   name="date"
                   type="date"
                   value={date}
                   onChange={(e) => setDate(e.target.value)}
-                  style={{ width: "30%", margin: "0 auto" }}
+                  style={{ width: "30%", margin: "0 " }}
                 />
               </FormGroup>
             </Row>
